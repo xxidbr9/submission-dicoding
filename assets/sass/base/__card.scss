@@ -1,0 +1,7 @@
+.card {
+    background-color: #fff;
+    border-radius: $font_sm;
+    @media (max-width: $s_mobile) {
+        border-radius: 0;
+    }
+}

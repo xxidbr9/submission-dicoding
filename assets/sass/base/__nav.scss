@@ -1,0 +1,106 @@
+header {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: $nav_height;
+    top: 0;
+    // position: fixed;
+    z-index: 999;
+    @media (max-width: $s_mobile) {
+        position: fixed;
+    }
+    .navbar {
+        height: 100%;
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+        @media (max-width: $s_mobile) {
+            justify-content: space-between;
+            // padding: 0 2rem;
+        }
+        &__menus_btn {
+            svg {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+        &__brand {
+            width: auto;
+            align-self: center;
+            &__logo {
+                margin: 0 !important;
+                padding: 0 !important;
+                svg {
+                    width: 8rem;
+                    height: 2rem;
+                    * {
+                        position: absolute;
+                        left: 0;
+                    }
+                }
+            }
+        }
+        &__search {
+            display: flex;
+            width: 30%;
+            height: 4rem;
+            // background-color: #ee3;
+            margin: auto;
+            position: relative;
+            &__icon {
+                position: absolute;
+                top: 25%;
+                left: 2rem;
+                // bottom: 2rem;
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+            &__input,
+            input {
+                z-index: 2;
+                padding: 0 2rem;
+                border-radius: 2rem;
+                border: 0;
+                outline: none;
+                background-color: $bg_color;
+                height: 100%;
+                padding-left: 5rem;
+                width: 100%;
+                &::placeholder {
+                    font-size: $font_lg;
+                    color: $text_sec_color;
+                }
+            }
+        }
+        &__menus {
+            // margin-left: auto !important;
+            list-style: none;
+            display: flex !important;
+            flex-direction: row;
+            padding: 0;
+            margin: 0;
+            &__item {
+                cursor: pointer;
+                svg,
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                }
+                img {
+                    border-radius: 50%;
+                    @media (max-width: $s_mobile) {
+                        display: none;
+                    }
+                }
+                &:nth-child(2) {
+                    margin: 0 2rem;
+                    @media (max-width: $s_mobile) {
+                        margin: 0 0 0 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

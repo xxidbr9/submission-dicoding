@@ -1,0 +1,34 @@
+.filter {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    &__hr {
+        height: 1px;
+        background-color: $text_sec_2;
+        display: block;
+        width: 65%;
+    }
+    &__tagline {
+        width: 35%;
+        display: flex;
+        justify-content: space-between;
+        &__title {
+            margin-left: 1rem;
+        }
+        &__drop {
+            cursor: pointer;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            &__ceret {
+                margin-left: .2rem;
+                svg {
+                    width: $font_sm;
+                    height: $font_sm;
+                }
+            }
+        }
+    }
+}

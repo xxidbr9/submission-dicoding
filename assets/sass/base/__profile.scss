@@ -1,0 +1,55 @@
+@mixin fixedSide {
+    width: $side_size;
+    position: fixed;
+}
+
+.profile {
+    // height: 200px;
+    // padding: 2rem;
+    // position: fixed;
+    // flex-basis: $side_size;
+    width: $side_size;
+    // position: relative;
+    // height: auto;
+    .fixed {
+        width: $side_size;
+        @include fixedSide();
+    }
+    &__banner {
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+        // position: absolute;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 6rem;
+        }
+    }
+    &__pic {
+        margin-top: -4rem;
+        text-align: center;
+        img {
+            width: 7rem;
+            border: 4px solid #fff;
+            border-radius: 50%;
+        }
+    }
+    &__content {
+        // position: relative;
+        // top: 13rem;
+        &__name {
+            // margin-top: 2rem;
+            font-size: $font_lg;
+            color: $text_main_color;
+            font-weight: 500;
+            text-align: center;
+        }
+        &__label {
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+        &__class {
+            margin: 2rem 0 1rem;
+        }
+    }
+}

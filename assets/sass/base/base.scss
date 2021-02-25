@@ -1,0 +1,181 @@
+@import "./variable.scss";
+// Importing Components
+@import "./_nav";
+@import "./_card";
+@import "./_profile";
+@import "./_main";
+@import "./_breakline";
+@import "./_right";
+@import "./_article";
+:root,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background-color: $bg_color;
+    color: $text_main_color;
+}
+
+.container {
+    margin: auto;
+    @media (min-width: 1200px) {
+        .mobile {
+            display: none !important;
+        }
+        .pc {
+            // display: block !important;
+            display: unset;
+        }
+        max-width: 1140px;
+    }
+    @media (max-width:1199.98px) {
+        .mobile_container {
+            // display: block !important;
+            padding: 0 $font_sm;
+        }
+        .pc {
+            display: none !important;
+        }
+    }
+}
+
+.content {
+    // position: absolute;
+    margin-top: $in_padding + $nav_height;
+    @media (max-width: $s_mobile) {
+        margin-top: $font_sm + $nav_height;
+    }
+}
+
+.row {
+    // display: flex;
+    display: grid;
+    grid-template-areas: "profile main assignment ";
+    grid-column-gap: 2rem;
+    column-gap: 2rem;
+    @media (max-width: $s_mobile) {
+        display: flex;
+    }
+}
+
+.py-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.my-1 {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.small {
+    color: $text_sec_2;
+    font-size: $font_sm;
+}
+
+.font-black {
+    color: $text_main_color !important;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.spacing-x {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.spacing-y {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.spacing-y\/2 {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.spacing-y\/4 {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+
+.label {
+    text-align: center;
+    border-radius: .3rem;
+    color: #fff;
+    font-size: $font_sm;
+    padding: .2rem .8rem;
+    background-color: $main_color;
+}
+
+@mixin svg-size {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+@mixin bg-btn() {
+    //
+    $size_bg-btn: 2.2rem;
+    //
+    // background-color: pink;
+    border-radius: 50%;
+    width: $size_bg-btn;
+    height: $size_bg-btn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -.7rem;
+    &:hover {
+        transition: all ease-out .2s;
+        background-color: rgba($main_color, .1);
+    }
+}
+
+.list {
+    &__header {
+        font-size: $font_lg;
+        font-weight: 500;
+        color: $text_main_color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__setting {
+            @include bg-btn();
+            svg {
+                @include svg-size();
+            }
+        }
+    }
+    &__listed {
+        color: $text_main_color;
+        list-style: none;
+        padding: 0;
+        li {
+            font-size: $font_md;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            padding: .5rem 0;
+        }
+        &__menu {
+            @include bg-btn();
+            svg {
+                @include svg-size();
+            }
+        }
+    }
+    &__show-more {
+        color: $main_color;
+        font-weight: 600;
+        text-decoration: none;
+    }
+}

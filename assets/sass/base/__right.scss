@@ -1,0 +1,57 @@
+@mixin fixedSide {
+    width: $side_size;
+    position: fixed;
+}
+
+.side_right {
+    // margin-left: auto;
+    // flex-basis: $side_size;
+    width: $side_size;
+    // padding: 2rem;
+    // @include fixedSide();
+    &__fixed {
+        width: $side_size;
+        @include fixedSide();
+        .assigment {
+            // @include fixedSide();
+            background-color: #fff;
+            // height: 20rem;
+            // padding: 1.5rem;
+        }
+        .footer {
+            // background-color: aqua;
+            // display: none;
+            // position: fixed;
+            // @include fixedSide();
+            margin-top: 1rem;
+            font-size: $font_sm;
+            ul,
+            li,
+            &__lists {
+                // justify-content: center;
+                display: flex;
+                flex-grow: 3;
+                flex-wrap: wrap;
+                list-style: none;
+                padding: 0 !important;
+                margin: .2rem 0 !important;
+                a {
+                    color: $text_sec_color;
+                    text-decoration: none !important;
+                }
+                &:nth-child(2n) {
+                    padding: 0 .8rem !important;
+                }
+                &__item {
+                    margin: .2rem 0 !important;
+                    width: auto;
+                }
+            }
+            &__brand {
+                justify-content: center;
+                text-align: center;
+                color: $text_sec_color;
+            }
+        }
+    }
+}
