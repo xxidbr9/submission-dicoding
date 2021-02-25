@@ -9,7 +9,7 @@ module.exports="#9221ff8c7e69f873857575c99d237702";
 },{}],"x3YS":[function(require,module,exports) {
 module.exports="#6c6ecd9f97c0b18a3987432bab43978c";
 },{}],"Cm8Y":[function(require,module,exports) {
-module.exports="/profile.bbe817ac.jpg";
+module.exports="profile.bbe817ac.jpg";
 },{}],"aQTQ":[function(require,module,exports) {
 module.exports="#962849c90817e6e09652bc442ad91c5e";
 },{}],"XcgR":[function(require,module,exports) {
